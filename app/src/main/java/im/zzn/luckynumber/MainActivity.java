@@ -1,9 +1,5 @@
 package im.zzn.luckynumber;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-
-import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
@@ -13,6 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.Button;
 
+import com.google.ads.conversiontracking.AdWordsConversionReporter;
 
 public class MainActivity extends ActionBarActivity {
     // Remove the below line after defining your own ad unit ID.
@@ -33,9 +30,16 @@ public class MainActivity extends ActionBarActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                textView.setText(String.valueOf(Math.floor(Math.random()*100)));
+                textView.setText(String.valueOf(Math.floor(Math.random() * 100)));
             }
         });
+
+        // Lucky Number Download
+        // Google Android download conversion tracking snippet
+        // Add this code to the onCreate() method of your application activity
+
+        AdWordsConversionReporter.reportWithConversionId(this.getApplicationContext(),
+                "991950745", "WtZqCOivi10Qme__2AM", "1.00", false);
     }
 
 
