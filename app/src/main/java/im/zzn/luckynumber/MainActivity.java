@@ -40,6 +40,14 @@ public class MainActivity extends ActionBarActivity {
 
         AdWordsConversionReporter.reportWithConversionId(this.getApplicationContext(),
                 "991950745", "WtZqCOivi10Qme__2AM", "1.00", false);
+
+        // Lucky number native First Open
+        // Google Android first open conversion tracking snippet
+        // Add this code to the onCreate() method of your application activity
+
+        AdWordsConversionReporter.reportWithConversionId(this.getApplicationContext(),
+                "991950745", "4DYyCPXMl10Qme__2AM", "0.00", false);
+
     }
 
 
